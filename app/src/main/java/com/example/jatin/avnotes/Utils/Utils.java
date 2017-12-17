@@ -1,4 +1,4 @@
-package com.example.jatin.avnotes;
+package com.example.jatin.avnotes.Utils;
 
 import java.io.BufferedReader;
 import java.io.IOException;

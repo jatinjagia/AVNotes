@@ -1,5 +1,8 @@
-package com.example.jatin.avnotes;
+package com.example.jatin.avnotes.activities;
 
+import com.example.jatin.avnotes.R;
+import com.example.jatin.avnotes.Utils.PrefsUtils;
+import com.example.jatin.avnotes.Utils.Utils;
 import com.example.jatin.avnotes.tasks.EditDriveFileAsyncTask;
 import com.google.android.gms.drive.CreateFileActivityOptions;
 import com.google.android.gms.drive.DriveContents;
@@ -88,7 +91,7 @@ public class MainActivity extends BaseDriveActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        boolean name=PrefsUtils.getInstance(this).getValue(getString(R.string.first_login));
+        boolean name= PrefsUtils.getInstance(this).getValue(getString(R.string.first_login));
         if (PrefsUtils.getInstance(this).getValue(getString(R.string.first_login))) {
             signInAction();
             setContentView(R.layout.activity_main);

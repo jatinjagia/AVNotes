@@ -1,9 +1,11 @@
-package com.example.jatin.avnotes;
+package com.example.jatin.avnotes.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.jatin.avnotes.R;
+import com.example.jatin.avnotes.Utils.PrefsUtils;
 import com.google.android.gms.common.SignInButton;
 
 /**
@@ -19,7 +21,7 @@ public class LoginActivity extends BaseDriveActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        boolean name=PrefsUtils.getInstance(this).hasValue(getString(R.string.first_login));
+        boolean name= PrefsUtils.getInstance(this).hasValue(getString(R.string.first_login));
         if (!PrefsUtils.getInstance(this).getValue(getString(R.string.first_login))) {
             setContentView(R.layout.login_activity);
             mSignInButton = findViewById(R.id.sign_in);

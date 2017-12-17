@@ -1,4 +1,4 @@
-package com.example.jatin.avnotes;
+package com.example.jatin.avnotes.Utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;

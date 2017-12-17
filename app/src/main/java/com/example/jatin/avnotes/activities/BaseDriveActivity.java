@@ -1,8 +1,10 @@
-package com.example.jatin.avnotes;
+package com.example.jatin.avnotes.activities;
 
 /**
  * Created by jatin on 16/12/17.
  */
+import com.example.jatin.avnotes.R;
+import com.example.jatin.avnotes.Utils.PrefsUtils;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -66,7 +68,7 @@ public abstract class BaseDriveActivity extends Activity {
             if (resultCode == RESULT_OK) {
                 Log.i(TAG, "Signed in successfully.");
                 PrefsUtils.getInstance(this).setValue(getString(R.string.first_login),true);
-                boolean name=PrefsUtils.getInstance(this).hasValue(getString(R.string.first_login));
+                boolean name= PrefsUtils.getInstance(this).hasValue(getString(R.string.first_login));
                 // Create Drive clients now that account has been authorized access.
                 createDriveClients(GoogleSignIn.getLastSignedInAccount(this));
             } else {
